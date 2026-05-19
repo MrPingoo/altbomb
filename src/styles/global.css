@@ -1,0 +1,58 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0f0f1a;
+  --bg2:       #1a1a2e;
+  --bg3:       #16213e;
+  --accent:    #e94560;
+  --accent2:   #f5a623;
+  --text:      #e2e8f0;
+  --text-muted:#94a3b8;
+  --border:    #2d3748;
+  --radius:    12px;
+  --radius-sm: 8px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+}
+.btn:disabled  { opacity: .45; cursor: not-allowed; }
+.btn:not(:disabled):hover  { opacity: .88; }
+.btn:not(:disabled):active { transform: scale(.97); }
+.btn--primary   { background: var(--accent); color: #fff; }
+.btn--secondary { background: var(--bg3); color: var(--text); border: 1px solid var(--border); }
+.btn--ghost     { background: transparent; color: var(--text-muted); }
+.btn--lg        { padding: .85rem 2.2rem; font-size: 1.1rem; }
+
+/* Input */
+.input {
+  width: 100%;
+  padding: .75rem 1rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .2s;
+}
+.input:focus      { border-color: var(--accent); }
+.input--code      { text-transform: uppercase; letter-spacing: .2em; text-align: center; font-size: 1.2rem; }

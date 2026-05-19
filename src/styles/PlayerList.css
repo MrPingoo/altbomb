@@ -1,0 +1,52 @@
+.player-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.player-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6rem .8rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  transition: border-color .2s, background .2s;
+}
+
+.player-list__item--active {
+  border-color: var(--accent);
+  background: rgba(233,69,96,.08);
+}
+
+.player-list__item--me {
+  border-color: var(--accent2);
+}
+
+.player-list__item--dead {
+  opacity: .4;
+  text-decoration: line-through;
+}
+
+.player-list__name {
+  font-weight: 600;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-list__you   { color: var(--text-muted); font-weight: 400; font-size: .8rem; }
+.player-list__crown { font-size: .85rem; }
+
+.player-list__lives {
+  display: flex;
+  gap: 2px;
+  font-size: .85rem;
+  flex-shrink: 0;
+}

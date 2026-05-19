@@ -1,0 +1,49 @@
+.word-input {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.word-input__wrap {
+  display: flex;
+  gap: .5rem;
+}
+
+.word-input__field {
+  flex: 1;
+  padding: .75rem 1rem;
+  background: var(--bg3);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color .2s;
+  letter-spacing: .05em;
+}
+
+.word-input__field:focus {
+  border-color: var(--accent2);
+}
+
+.word-input__field--valid {
+  border-color: #22c55e !important;
+}
+
+.word-input__field--invalid {
+  border-color: #ef4444 !important;
+}
+
+.word-input__field:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.word-input__hint {
+  font-size: .82rem;
+  color: #fca5a5;
+  padding-left: .2rem;
+}
